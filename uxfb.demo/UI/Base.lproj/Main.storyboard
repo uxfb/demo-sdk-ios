@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kSP-Kb-vNU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kSP-Kb-vNU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
         <!--Callback View Controller-->
         <scene sceneID="e4o-VL-4qh">
             <objects>
-                <viewController storyboardIdentifier="CallbackViewController" id="ZLA-z2-9p2" customClass="CallbackViewController" customModule="uxfeedback_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CallbackViewController" id="ZLA-z2-9p2" customClass="CallbackViewController" customModule="uxfb_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CFz-D2-pPY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +81,7 @@
         <!--Campaign View Controller-->
         <scene sceneID="3nW-0k-e9X">
             <objects>
-                <viewController storyboardIdentifier="CampaignViewController" id="F4D-Vh-8p9" customClass="CampaignViewController" customModule="uxfeedback_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CampaignViewController" id="F4D-Vh-8p9" customClass="CampaignViewController" customModule="uxfb_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IhX-LC-kOb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,17 +146,24 @@
                                     <outlet property="delegate" destination="F4D-Vh-8p9" id="hrU-zV-8pB"/>
                                 </connections>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ikO-h1-nG6">
+                                <rect key="frame" x="16" y="297" width="382" height="368"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y9B-Td-vh4"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ecV-sd-9o3" firstAttribute="leading" secondItem="Y9B-Td-vh4" secondAttribute="leading" constant="16" id="6Hs-Sg-4nN"/>
+                            <constraint firstItem="Y9B-Td-vh4" firstAttribute="trailing" secondItem="ikO-h1-nG6" secondAttribute="trailing" constant="16" id="6iJ-M5-Wv7"/>
                             <constraint firstItem="65u-Zq-1in" firstAttribute="top" secondItem="kir-s7-jQL" secondAttribute="bottom" constant="8" id="76z-z8-3ML"/>
                             <constraint firstItem="Y9B-Td-vh4" firstAttribute="trailing" secondItem="OmI-hP-Bxm" secondAttribute="trailing" constant="16" id="C3i-60-Esi"/>
                             <constraint firstItem="9aV-yC-4K9" firstAttribute="leading" secondItem="Y9B-Td-vh4" secondAttribute="leading" constant="16" id="Hvz-U1-5GK"/>
                             <constraint firstItem="OmI-hP-Bxm" firstAttribute="leading" secondItem="Y9B-Td-vh4" secondAttribute="leading" constant="16" id="IIb-pj-Q8d"/>
                             <constraint firstItem="kir-s7-jQL" firstAttribute="top" secondItem="812-rB-bxu" secondAttribute="bottom" constant="24" id="Iwf-aH-7Sn"/>
+                            <constraint firstItem="ikO-h1-nG6" firstAttribute="leading" secondItem="Y9B-Td-vh4" secondAttribute="leading" constant="16" id="J7V-on-1rd"/>
+                            <constraint firstItem="ikO-h1-nG6" firstAttribute="top" secondItem="65u-Zq-1in" secondAttribute="bottom" constant="8" id="Jc3-Ic-FJl"/>
                             <constraint firstItem="Y9B-Td-vh4" firstAttribute="trailing" secondItem="ecV-sd-9o3" secondAttribute="trailing" constant="16" id="Kzo-k4-0YW"/>
                             <constraint firstItem="812-rB-bxu" firstAttribute="top" secondItem="OmI-hP-Bxm" secondAttribute="bottom" constant="8" id="Nek-Vl-JlT"/>
                             <constraint firstItem="Y9B-Td-vh4" firstAttribute="bottom" secondItem="9aV-yC-4K9" secondAttribute="bottom" constant="24" id="PtY-Sh-axA"/>
@@ -167,6 +174,7 @@
                             <constraint firstItem="Y9B-Td-vh4" firstAttribute="trailing" secondItem="9aV-yC-4K9" secondAttribute="trailing" constant="16" id="k05-fT-Iqc"/>
                             <constraint firstItem="9aV-yC-4K9" firstAttribute="top" secondItem="ecV-sd-9o3" secondAttribute="bottom" constant="16" id="ndi-jJ-VBf"/>
                             <constraint firstItem="Y9B-Td-vh4" firstAttribute="trailing" secondItem="kir-s7-jQL" secondAttribute="trailing" constant="16" id="pD9-ed-qoa"/>
+                            <constraint firstItem="ecV-sd-9o3" firstAttribute="top" secondItem="ikO-h1-nG6" secondAttribute="bottom" constant="8" id="roI-uz-QH0"/>
                             <constraint firstItem="812-rB-bxu" firstAttribute="leading" secondItem="Y9B-Td-vh4" secondAttribute="leading" constant="16" id="wFX-pA-tT7"/>
                             <constraint firstItem="Y9B-Td-vh4" firstAttribute="trailing" secondItem="812-rB-bxu" secondAttribute="trailing" constant="16" id="xDq-8b-DTv"/>
                         </constraints>
@@ -181,6 +189,7 @@
                         <outlet property="cancelButton" destination="9aV-yC-4K9" id="HMk-Ki-KoI"/>
                         <outlet property="eventTextField" destination="65u-Zq-1in" id="iLX-sl-jFv"/>
                         <outlet property="showButton" destination="ecV-sd-9o3" id="H0X-UP-7Ki"/>
+                        <outlet property="tableView" destination="ikO-h1-nG6" id="pzM-dC-wrL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXw-fe-yoG" sceneMemberID="firstResponder"/>
@@ -190,12 +199,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1717" y="1325"/>
+            <point key="canvasLocation" x="-1717.3913043478262" y="1324.5535714285713"/>
         </scene>
         <!--Кампания-->
         <scene sceneID="azR-nz-YgB">
             <objects>
-                <viewController storyboardIdentifier="CampaignViewController1" id="J4w-W8-EgO" customClass="CampaignViewController" customModule="uxfeedback_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CampaignViewController1" id="J4w-W8-EgO" customClass="CampaignViewController" customModule="uxfb_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iMd-j4-26h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -307,7 +316,7 @@
         <!--Settings View Controller-->
         <scene sceneID="GDA-4C-Rjf">
             <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="sug-ar-KAS" customClass="SettingsViewController" customModule="uxfeedback_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" id="sug-ar-KAS" customClass="SettingsViewController" customModule="uxfb_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NDW-YS-YNr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -339,7 +348,7 @@
         <!--App Id View Controller-->
         <scene sceneID="6VJ-9r-ssf">
             <objects>
-                <viewController storyboardIdentifier="AppIdViewController" id="WzZ-ux-g1A" customClass="AppIdViewController" customModule="uxfeedback_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppIdViewController" id="WzZ-ux-g1A" customClass="AppIdViewController" customModule="uxfb_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i2F-yu-V9C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -425,7 +434,7 @@
         <!--Sdk Settings View Controller-->
         <scene sceneID="N2h-Pc-DEi">
             <objects>
-                <viewController storyboardIdentifier="SdkSettingsViewController" id="Lm6-oP-AVe" customClass="SdkSettingsViewController" customModule="uxfeedback_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SdkSettingsViewController" id="Lm6-oP-AVe" customClass="SdkSettingsViewController" customModule="uxfb_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p0a-LA-4Sg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -455,7 +464,7 @@
         <!--Theme View Controller-->
         <scene sceneID="634-Vc-ljH">
             <objects>
-                <viewController storyboardIdentifier="ThemeViewController" id="dg9-WY-PsA" customClass="ThemeViewController" customModule="uxfeedback_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThemeViewController" id="dg9-WY-PsA" customClass="ThemeViewController" customModule="uxfb_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JMc-yQ-GqO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -485,7 +494,7 @@
         <!--Property View Controller-->
         <scene sceneID="3Dg-Oe-u9L">
             <objects>
-                <viewController storyboardIdentifier="PropertyViewController" id="KJb-Wb-ZYt" customClass="PropertyViewController" customModule="uxfeedback_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PropertyViewController" id="KJb-Wb-ZYt" customClass="PropertyViewController" customModule="uxfb_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jmv-yK-9Cm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -512,9 +521,127 @@
             </objects>
             <point key="canvasLocation" x="2562.3188405797105" y="2027.6785714285713"/>
         </scene>
+        <!--Attribute View Controller-->
+        <scene sceneID="Leg-eC-fEP">
+            <objects>
+                <viewController storyboardIdentifier="AttributeViewController" id="Ur8-2i-zRK" customClass="AttributeViewController" customModule="uxfb_demo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2oJ-c7-w4L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="25w-xe-ZmX">
+                                <rect key="frame" x="20" y="56" width="374" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Q5D-A6-zZt"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="String"/>
+                                    <segment title="Numeric"/>
+                                    <segment title="Date"/>
+                                    <segment title="Bool"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="Ur8-2i-zRK" eventType="valueChanged" id="yUs-kh-awK"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfC-ke-N4E">
+                                <rect key="frame" x="20" y="792" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="w3x-zY-OrO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Добавить аттрибут"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="Ur8-2i-zRK" eventType="touchUpInside" id="Bct-F0-emc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attribute value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQz-Oo-ix0">
+                                <rect key="frame" x="20" y="178" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="String attribute value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4kY-PU-oO6">
+                                <rect key="frame" x="20" y="215" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DfS-7g-y4p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2oJ-c7-w4L" id="BAR-rf-zhV"/>
+                                </connections>
+                            </textField>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mNM-Cb-wp8">
+                                <rect key="frame" x="20" y="215" width="374" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GO2-ZO-cjv"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="True"/>
+                                    <segment title="False"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Attribute name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tkv-Dj-49N">
+                                <rect key="frame" x="20" y="112" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0DR-Is-c4Z"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="d2t-eF-raI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2oJ-c7-w4L" id="PBK-FN-xSe"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Gr-5s-aiD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="tkv-Dj-49N" firstAttribute="top" secondItem="25w-xe-ZmX" secondAttribute="bottom" constant="16" id="3rr-So-5QP"/>
+                            <constraint firstItem="4Gr-5s-aiD" firstAttribute="trailing" secondItem="25w-xe-ZmX" secondAttribute="trailing" constant="20" id="5hI-z2-fur"/>
+                            <constraint firstItem="4Gr-5s-aiD" firstAttribute="trailing" secondItem="mNM-Cb-wp8" secondAttribute="trailing" constant="20" id="FDY-2k-X5A"/>
+                            <constraint firstItem="4Gr-5s-aiD" firstAttribute="trailing" secondItem="tkv-Dj-49N" secondAttribute="trailing" constant="20" id="FcS-4s-Ebf"/>
+                            <constraint firstItem="HfC-ke-N4E" firstAttribute="leading" secondItem="4Gr-5s-aiD" secondAttribute="leading" constant="20" id="K88-gk-Xrh"/>
+                            <constraint firstItem="25w-xe-ZmX" firstAttribute="leading" secondItem="4Gr-5s-aiD" secondAttribute="leading" constant="20" id="M0Z-Rf-qDG"/>
+                            <constraint firstItem="4Gr-5s-aiD" firstAttribute="trailing" secondItem="4kY-PU-oO6" secondAttribute="trailing" constant="20" id="MBu-l3-SB6"/>
+                            <constraint firstItem="mNM-Cb-wp8" firstAttribute="top" secondItem="JQz-Oo-ix0" secondAttribute="bottom" constant="16" id="Qxd-rU-o69"/>
+                            <constraint firstItem="JQz-Oo-ix0" firstAttribute="top" secondItem="tkv-Dj-49N" secondAttribute="bottom" constant="16" id="UAV-dw-F2d"/>
+                            <constraint firstItem="JQz-Oo-ix0" firstAttribute="leading" secondItem="4Gr-5s-aiD" secondAttribute="leading" constant="20" id="X2v-3o-cN8"/>
+                            <constraint firstItem="4kY-PU-oO6" firstAttribute="top" secondItem="JQz-Oo-ix0" secondAttribute="bottom" constant="16" id="fix-XG-f3k"/>
+                            <constraint firstItem="25w-xe-ZmX" firstAttribute="top" secondItem="4Gr-5s-aiD" secondAttribute="top" constant="8" id="oRu-DM-lkk"/>
+                            <constraint firstItem="4Gr-5s-aiD" firstAttribute="trailing" secondItem="HfC-ke-N4E" secondAttribute="trailing" constant="20" id="oqg-zY-OP2"/>
+                            <constraint firstItem="mNM-Cb-wp8" firstAttribute="leading" secondItem="4Gr-5s-aiD" secondAttribute="leading" constant="20" id="qN6-en-uRj"/>
+                            <constraint firstItem="tkv-Dj-49N" firstAttribute="leading" secondItem="4Gr-5s-aiD" secondAttribute="leading" constant="20" id="u40-wj-2kK"/>
+                            <constraint firstItem="4kY-PU-oO6" firstAttribute="leading" secondItem="4Gr-5s-aiD" secondAttribute="leading" constant="20" id="u9I-v7-8Tv"/>
+                            <constraint firstItem="4Gr-5s-aiD" firstAttribute="bottom" secondItem="HfC-ke-N4E" secondAttribute="bottom" constant="20" id="v6o-J1-9LV"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="v41-Ht-7dy" appends="YES" id="itl-ft-1qd"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="HfC-ke-N4E" id="NL3-iJ-IBc"/>
+                        <outlet property="boolSegment" destination="mNM-Cb-wp8" id="ARw-Ap-M3h"/>
+                        <outlet property="nameTextEdit" destination="tkv-Dj-49N" id="uWd-j4-ta2"/>
+                        <outlet property="textEdit" destination="4kY-PU-oO6" id="kfR-M1-jvD"/>
+                        <outlet property="typeSegment" destination="25w-xe-ZmX" id="xwh-75-fpU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHL-3e-7PV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="v41-Ht-7dy">
+                    <connections>
+                        <action selector="backTap:" destination="Ur8-2i-zRK" id="yIV-bF-GOC"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-2414" y="1319"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="filemenu.and.cursorarrow" catalog="system" width="128" height="97"/>
+        <image name="filemenu.and.cursorarrow" catalog="system" width="128" height="100"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="message" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">

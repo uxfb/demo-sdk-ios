@@ -8,7 +8,7 @@ use_frameworks!
 
 target 'uxfb.demo' do
 
-pod 'UXFBSDK', '~> 2.2.0'
+pod 'UXFBSDK', '~> 2.6.0'
 
 # pod 'FirebasePerformance'
 

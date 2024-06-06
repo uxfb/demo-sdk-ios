@@ -30,6 +30,7 @@
 		BF7F06C829C5C5BC00959D88 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F06C729C5C5BC00959D88 /* UIColor+.swift */; };
 		BF7F06CA29C5CA5100959D88 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F06C929C5CA5100959D88 /* ColorManager.swift */; };
 		BFA54F8627AAA582003D6411 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA54F8527AAA582003D6411 /* DefaultsManager.swift */; };
+		BFF2C3E22C11BCDE00113DCF /* AttributeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF2C3E12C11BCDE00113DCF /* AttributeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +73,7 @@
 		BF7F06C729C5C5BC00959D88 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		BF7F06C929C5CA5100959D88 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		BFA54F8527AAA582003D6411 /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
+		BFF2C3E12C11BCDE00113DCF /* AttributeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeViewController.swift; sourceTree = "<group>"; };
 		EC97DF99B8A88BFC2674BE92 /* Pods-uxfb.demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uxfb.demo.release.xcconfig"; path = "Target Support Files/Pods-uxfb.demo/Pods-uxfb.demo.release.xcconfig"; sourceTree = "<group>"; };
 		F50040770504C113E3921DBA /* Pods-uxfb.demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uxfb.demo.debug.xcconfig"; path = "Target Support Files/Pods-uxfb.demo/Pods-uxfb.demo.debug.xcconfig"; sourceTree = "<group>"; };
 		FE1D234D20F60E4B576ECE40 /* Pods-uxfeedback.demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uxfeedback.demo.release.xcconfig"; path = "Target Support Files/Pods-uxfeedback.demo/Pods-uxfeedback.demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				BF4F051E26ECBB9A005E3CB7 /* CallbackViewController.swift */,
 				BF01BE0E2561F2B1008C641B /* CampaignViewController.swift */,
 				BF7F06A929C5A06300959D88 /* SettingsViewController.swift */,
+				BFF2C3E12C11BCDE00113DCF /* AttributeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				BF7F06AC29C5A30400959D88 /* SdkManager.swift in Sources */,
 				BF01BE0F2561F2B1008C641B /* CampaignViewController.swift in Sources */,
 				BF7F06B529C5A7C600959D88 /* Character+.swift in Sources */,
+				BFF2C3E22C11BCDE00113DCF /* AttributeViewController.swift in Sources */,
 				BF7F06C229C5B51D00959D88 /* SdkSettingsViewController.swift in Sources */,
 				BF7F06BA29C5AF9C00959D88 /* AppIdViewController.swift in Sources */,
 				BF7F06C629C5BBDD00959D88 /* UIViewController+.swift in Sources */,
