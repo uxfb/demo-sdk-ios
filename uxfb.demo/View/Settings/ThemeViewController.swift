@@ -136,44 +136,49 @@ extension ThemeViewController: UITableViewDataSource {
             elementName = "controlIconColor"
             elementValue = sdkManager.theme.controlIconColor.hexString()
             colorView.backgroundColor = sdkManager.theme.controlIconColor
-            
+                
         case 16:
+            elementName = "iconRating.1"
+            elementValue = sdkManager.theme.controlIconColor.hexString()
+            colorView.backgroundColor = sdkManager.theme.iconRating
+            
+        case 17:
             elementName = "formBorderRadius"
             elementValue = "\(sdkManager.theme.formBorderRadius)"
             colorView.backgroundColor = .clear
             colorView.layer.borderWidth = 0
             
-        case 17:
+        case 18:
             elementName = "btnBorderRadius"
             elementValue = "\(sdkManager.theme.btnBorderRadius)"
             colorView.backgroundColor = .clear
             colorView.layer.borderWidth = 0
             
-        case 18:
+        case 19:
             elementName = "fontH1"
             elementValue = "\(sdkManager.theme.fontH1.fontName) - \(sdkManager.theme.fontH1.pointSize)"
             colorView.backgroundColor = .clear
             colorView.layer.borderWidth = 0
             
-        case 19:
+        case 20:
             elementName = "fontH2"
             elementValue = "\(sdkManager.theme.fontH2.fontName) - \(sdkManager.theme.fontH2.pointSize)"
             colorView.backgroundColor = .clear
             colorView.layer.borderWidth = 0
             
-        case 20:
+        case 21:
             elementName = "fontP1"
             elementValue = "\(sdkManager.theme.fontP1.fontName) - \(sdkManager.theme.fontP1.pointSize)"
             colorView.backgroundColor = .clear
             colorView.layer.borderWidth = 0
             
-        case 21:
+        case 22:
             elementName = "fontP2"
             elementValue = "\(sdkManager.theme.fontP2.fontName) - \(sdkManager.theme.fontP2.pointSize)"
             colorView.backgroundColor = .clear
             colorView.layer.borderWidth = 0
             
-        case 22:
+        case 23:
             elementName = "fontBtn"
             elementValue = "\(sdkManager.theme.fontBtn.fontName) - \(sdkManager.theme.fontBtn.pointSize)"
             colorView.backgroundColor = .clear
@@ -194,104 +199,183 @@ extension ThemeViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.bgColor, title: "bgColor", from: self) { color in
-                self.sdkManager.theme.bgColor = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.bgColor, title: "bgColor", from: self) { color in
+                    self.sdkManager.theme.bgColor = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 1:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.iconColor, title: "iconColor", from: self) { color in
-                self.sdkManager.theme.iconColor = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.iconColor, title: "iconColor", from: self) { color in
+                    self.sdkManager.theme.iconColor = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 2:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.text01Color, title: "text01Color", from: self) { color in
-                self.sdkManager.theme.text01Color = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.text01Color, title: "text01Color", from: self) { color in
+                    self.sdkManager.theme.text01Color = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 3:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.text02Color, title: "text02Color", from: self) { color in
-                self.sdkManager.theme.text02Color = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.text02Color, title: "text02Color", from: self) { color in
+                    self.sdkManager.theme.text02Color = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 4:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.text03Color, title: "text03Color", from: self) { color in
-                self.sdkManager.theme.text03Color = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.text03Color, title: "text03Color", from: self) { color in
+                    self.sdkManager.theme.text03Color = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 5:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.mainColor, title: "mainColor", from: self) { color in
-                self.sdkManager.theme.mainColor = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.mainColor, title: "mainColor", from: self) { color in
+                    self.sdkManager.theme.mainColor = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 6:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.errorColorPrimary, title: "errorColorPrimary", from: self) { color in
-                self.sdkManager.theme.errorColorPrimary = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.errorColorPrimary, title: "errorColorPrimary", from: self) { color in
+                    self.sdkManager.theme.errorColorPrimary = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 7:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.errorColorSecondary, title: "errorColorSecondary", from: self) { color in
-                self.sdkManager.theme.errorColorSecondary = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.errorColorSecondary, title: "errorColorSecondary", from: self) { color in
+                    self.sdkManager.theme.errorColorSecondary = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 8:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.btnBgColor, title: "btnBgColor", from: self) { color in
-                self.sdkManager.theme.btnBgColor = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.btnBgColor, title: "btnBgColor", from: self) { color in
+                    self.sdkManager.theme.btnBgColor = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 9:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.btnBgColorActive, title: "btnBgColorActive", from: self) { color in
-                self.sdkManager.theme.btnBgColorActive = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.btnBgColorActive, title: "btnBgColorActive", from: self) { color in
+                    self.sdkManager.theme.btnBgColorActive = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 10:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.btnTextColor, title: "btnTextColor", from: self) { color in
-                self.sdkManager.theme.btnTextColor = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.btnTextColor, title: "btnTextColor", from: self) { color in
+                    self.sdkManager.theme.btnTextColor = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 11:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.inputBgColor, title: "inputBgColor", from: self) { color in
-                self.sdkManager.theme.inputBgColor = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.inputBgColor, title: "inputBgColor", from: self) { color in
+                    self.sdkManager.theme.inputBgColor = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 12:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.inputBorderColor, title: "inputBorderColor", from: self) { color in
-                self.sdkManager.theme.inputBorderColor = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.inputBorderColor, title: "inputBorderColor", from: self) { color in
+                    self.sdkManager.theme.inputBorderColor = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 13:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.controlBgColor, title: "controlBgColor", from: self) { color in
-                self.sdkManager.theme.controlBgColor = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.controlBgColor, title: "controlBgColor", from: self) { color in
+                    self.sdkManager.theme.controlBgColor = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 14:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.controlBgColorActive, title: "controlBgColorActive", from: self) { color in
-                self.sdkManager.theme.controlBgColorActive = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.controlBgColorActive, title: "controlBgColorActive", from: self) { color in
+                    self.sdkManager.theme.controlBgColorActive = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
         case 15:
-            ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.controlIconColor, title: "controlIconColor", from: self) { color in
-                self.sdkManager.theme.controlIconColor = color
-                self.tableView.reloadData()
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.controlIconColor, title: "controlIconColor", from: self) { color in
+                    self.sdkManager.theme.controlIconColor = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
             }
+                
         case 16:
+            if #available(iOS 14.0, *) {
+                ColorManager.shared.showPicker(currentColor: self.sdkManager.theme.iconRating, title: "iconRating.1", from: self) { color in
+                    self.sdkManager.theme.iconRating = color
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+                
+        case 17:
             AlertManager().showInput(from: self, title: "btnBorderRadius", message: "", value: "\(sdkManager.theme.formBorderRadius)", keyboardType: .numberPad) { value in
                 self.sdkManager.theme.formBorderRadius = CGFloat(Float(value) ?? 0)
                 self.tableView.reloadData()
             }
             
-        case 17:
+        case 18:
             AlertManager().showInput(from: self, title: "btnBorderRadius", message: "", value: "\(sdkManager.theme.btnBorderRadius)", keyboardType: .numberPad) { value in
                 self.sdkManager.theme.btnBorderRadius = CGFloat(Float(value) ?? 0)
                 self.tableView.reloadData()
             }
             
-        case 18:
+        case 19:
             let actionFont = {
-                FontManager.shared.showPicker(currentFont: self.sdkManager.theme.fontH1,
-                                              title: "fontH1",
-                                              from: self) { font in
-                    self.sdkManager.theme.fontH1 = font
-                    self.tableView.reloadData()
+                if #available(iOS 13.0, *) {
+                    FontManager.shared.showPicker(currentFont: self.sdkManager.theme.fontH1,
+                                                  title: "fontH1",
+                                                  from: self) { font in
+                        self.sdkManager.theme.fontH1 = font
+                        self.tableView.reloadData()
+                    }
+                } else {
+                    // Fallback on earlier versions
                 }
             }
             let actionSize = {
@@ -309,13 +393,17 @@ extension ThemeViewController: UITableViewDelegate {
                                      title: "fontH1",
                                      message: "",
                                      actions: actions)
-        case 19:
+        case 20:
             let actionFont = {
-                FontManager.shared.showPicker(currentFont: self.sdkManager.theme.fontH2,
-                                              title: "fontH2",
-                                              from: self) { font in
-                    self.sdkManager.theme.fontH2 = font
-                    self.tableView.reloadData()
+                if #available(iOS 13.0, *) {
+                    FontManager.shared.showPicker(currentFont: self.sdkManager.theme.fontH2,
+                                                  title: "fontH2",
+                                                  from: self) { font in
+                        self.sdkManager.theme.fontH2 = font
+                        self.tableView.reloadData()
+                    }
+                } else {
+                    // Fallback on earlier versions
                 }
             }
             let actionSize = {
@@ -333,13 +421,17 @@ extension ThemeViewController: UITableViewDelegate {
                                      title: "fontH2",
                                      message: "",
                                      actions: actions)
-        case 20:
+        case 21:
             let actionFont = {
-                FontManager.shared.showPicker(currentFont: self.sdkManager.theme.fontP1,
-                                              title: "fontP1",
-                                              from: self) { font in
-                    self.sdkManager.theme.fontP1 = font
-                    self.tableView.reloadData()
+                if #available(iOS 13.0, *) {
+                    FontManager.shared.showPicker(currentFont: self.sdkManager.theme.fontP1,
+                                                  title: "fontP1",
+                                                  from: self) { font in
+                        self.sdkManager.theme.fontP1 = font
+                        self.tableView.reloadData()
+                    }
+                } else {
+                    // Fallback on earlier versions
                 }
             }
             let actionSize = {
@@ -357,13 +449,17 @@ extension ThemeViewController: UITableViewDelegate {
                                      title: "fontP1",
                                      message: "",
                                      actions: actions)
-        case 21:
+        case 22:
             let actionFont = {
-                FontManager.shared.showPicker(currentFont: self.sdkManager.theme.fontP2,
-                                              title: "fontP2",
-                                              from: self) { font in
-                    self.sdkManager.theme.fontP2 = font
-                    self.tableView.reloadData()
+                if #available(iOS 13.0, *) {
+                    FontManager.shared.showPicker(currentFont: self.sdkManager.theme.fontP2,
+                                                  title: "fontP2",
+                                                  from: self) { font in
+                        self.sdkManager.theme.fontP2 = font
+                        self.tableView.reloadData()
+                    }
+                } else {
+                    // Fallback on earlier versions
                 }
             }
             let actionSize = {
@@ -381,13 +477,17 @@ extension ThemeViewController: UITableViewDelegate {
                                      title: "fontP2",
                                      message: "",
                                      actions: actions)
-        case 22:
+        case 23:
             let actionFont = {
-                FontManager.shared.showPicker(currentFont: self.sdkManager.theme.fontBtn,
-                                              title: "fontBtn",
-                                              from: self) { font in
-                    self.sdkManager.theme.fontBtn = font
-                    self.tableView.reloadData()
+                if #available(iOS 13.0, *) {
+                    FontManager.shared.showPicker(currentFont: self.sdkManager.theme.fontBtn,
+                                                  title: "fontBtn",
+                                                  from: self) { font in
+                        self.sdkManager.theme.fontBtn = font
+                        self.tableView.reloadData()
+                    }
+                } else {
+                    // Fallback on earlier versions
                 }
             }
             let actionSize = {

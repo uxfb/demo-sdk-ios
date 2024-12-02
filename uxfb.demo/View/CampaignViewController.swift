@@ -138,7 +138,7 @@ extension CampaignViewController: UITableViewDataSource {
     } else {
       cell.textLabel?.textAlignment = .left
       cell.textLabel?.text = sdkManager.attributes[indexPath.row].attributeName
-      cell.detailTextLabel?.text = "\(sdkManager.attributes[indexPath.row].attributeValue ?? "")"
+//      cell.detailTextLabel?.text = "\(sdkManager.attributes[indexPath.row].attributeValue ?? "")"
       cell.textLabel?.textColor = .black
     }
     return cell
@@ -157,8 +157,8 @@ extension CampaignViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     if editingStyle == .delete {
-      let _ = sdkManager.attributesBuilder.remove(attributeName: sdkManager.attributes[indexPath.row].attributeName)
-      self.tableView.deleteRows(at: [indexPath], with: .automatic)
+//      let _ = sdkManager.attributesBuilder.remove(attributeName: sdkManager.attributes[indexPath.row].attributeName)
+//      self.tableView.deleteRows(at: [indexPath], with: .automatic)
     }
   }
 }
