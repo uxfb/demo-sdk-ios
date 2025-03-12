@@ -11,7 +11,7 @@
 
 # Xcode
 xcuserdata/
-omgapp.xcworkspace/
+*.xcworkspace/
 project.xcworkspace/
 DerivedData/
 
