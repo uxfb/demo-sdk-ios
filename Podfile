@@ -6,7 +6,7 @@ use_frameworks!
 
 target 'uxfb.demo' do
 
-pod 'UXFBSDK', '~> 2.9.3'
+pod 'UXFBSDK', '~> 3.0.1'
 
 
 end

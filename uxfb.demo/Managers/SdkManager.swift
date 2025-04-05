@@ -119,6 +119,10 @@ extension SdkManager: UXFeedbackLogDelegate {
 }
 
 extension SdkManager: UXFeedbackCampaignDelegate {
+    func noCampaignToStart(eventName: String) {
+        CallbackManager.addMessage("noCampaignToStart: \(eventName)")
+    }
+    
     func campaignDidSend(campaignId: String) {
         CallbackManager.addMessage("campaignDidSend: \(campaignId)")
     }
